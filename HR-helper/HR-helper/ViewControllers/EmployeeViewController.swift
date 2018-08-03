@@ -63,7 +63,7 @@ extension EmployeeViewController: UIImagePickerControllerDelegate, UINavigationC
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         dismiss(animated: true, completion: nil)
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-            showAlert(title: "Error", message: TypeError.imageInvalid.localizedDescription)
+//            showAlert(title: "Error", message: TypeError.imageInvalid.localizedDescription)
             return
         }
         self.avatarContainer.backgroundColor = .clear
