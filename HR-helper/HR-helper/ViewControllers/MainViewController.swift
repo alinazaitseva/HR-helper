@@ -12,9 +12,16 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 {
     @IBOutlet weak var tableView: UIView!
     let employeeList = EmployeeList()
+    @IBOutlet weak var searchBar: UISearchBar!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return employeeList.getAmountOfEmployee()
+    }
+    
+    @IBAction func addEmployee(_ sender: UIBarButtonItem) {
+        guard let employeeVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "EmployeeViewController") as? EmployeeViewController
+        else { return }
+        self.navigationController?.pushViewController(employeeVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,6 +43,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print(indexPath.row)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        tableView.reloadData()
 //        let selectedEntity = SlotTableViewCell(title: employeeList.getValueInData(item: indexPath.row), description: employeeList.getValueInData)
 //        
 //        detailViewController.dataCell = selectedEntity
@@ -43,14 +51,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
-    func setUpUIColor(color: UIColor, for tableView: UITableView) {
-        tableView.separatorColor = color
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self as? UISearchBarDelegate
+        searchBar.resignFirstResponder()
+        
     }
-
-
 }
