@@ -15,6 +15,8 @@
 		CE4C3A7E2114375D00190747 /* SlotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A7D2114375D00190747 /* SlotTableViewCell.swift */; };
 		CE4C3A8121143D7E00190747 /* EmployeeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A8021143D7E00190747 /* EmployeeList.swift */; };
 		CE4C3A8421143F9D00190747 /* DataEmployeeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A8321143F9D00190747 /* DataEmployeeProtocol.swift */; };
+		CE4C3A872114554F00190747 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A862114554F00190747 /* CustomFont.swift */; };
+		CE4C3A892114556E00190747 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A882114556E00190747 /* CustomColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CE4C3A7D2114375D00190747 /* SlotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotTableViewCell.swift; sourceTree = "<group>"; };
 		CE4C3A8021143D7E00190747 /* EmployeeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeList.swift; sourceTree = "<group>"; };
 		CE4C3A8321143F9D00190747 /* DataEmployeeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEmployeeProtocol.swift; sourceTree = "<group>"; };
+		CE4C3A862114554F00190747 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		CE4C3A882114556E00190747 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		CE4C3A632112EFA000190747 /* HR-helper */ = {
 			isa = PBXGroup;
 			children = (
+				CE4C3A85211454AF00190747 /* Enums */,
 				CE4C3A8221143DD200190747 /* Protocols */,
 				CE4C3A7F2114376600190747 /* Cells */,
 				CE4C3A782112F08500190747 /* Models */,
@@ -111,6 +116,15 @@
 				CE4C3A8321143F9D00190747 /* DataEmployeeProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CE4C3A85211454AF00190747 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3A862114554F00190747 /* CustomFont.swift */,
+				CE4C3A882114556E00190747 /* CustomColor.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,8 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4C3A672112EFA100190747 /* MainViewController.swift in Sources */,
+				CE4C3A892114556E00190747 /* CustomColor.swift in Sources */,
 				CE4C3A8121143D7E00190747 /* EmployeeList.swift in Sources */,
 				CE4C3A652112EFA100190747 /* AppDelegate.swift in Sources */,
+				CE4C3A872114554F00190747 /* CustomFont.swift in Sources */,
 				CE4C3A8421143F9D00190747 /* DataEmployeeProtocol.swift in Sources */,
 				CE4C3A7E2114375D00190747 /* SlotTableViewCell.swift in Sources */,
 			);
