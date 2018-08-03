@@ -10,16 +10,28 @@ import Foundation
 
 class EmployeeList: DataEmployeeProtocol {
     
-    var listOfProtocol: [String] {
+    var listOfEmployee: [String] {
         return ["Petro Pidkova", "Ivan Salo", "Jack Sparrow", "Tony Stark", "Pinocchio"]
     }
     
-    func getValueInData(item: Int) -> String {
-        return listOfProtocol[item]
+    var listOfProfession: [String] {
+        return ["Sale Manager", "CEO", "Captain", "Iron Man", "Puppet"]
     }
     
-    func getAmountOfData() -> Int {
-        return listOfProtocol.count
+    func getValueInDataEmployee(item: Int) -> String {
+        return listOfEmployee[item]
+    }
+    
+    func getAmountOfEmployee() -> Int {
+        return listOfEmployee.count
+    }
+    
+    func getValueOfProfession(item: Int) -> String {
+        return listOfProfession[item]
+    }
+    
+    func getAmountOfProfession() -> Int {
+        return listOfProfession.count
     }
     
 }

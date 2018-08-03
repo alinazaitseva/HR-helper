@@ -33,21 +33,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bat-face" translatesAutoresizingMaskIntoConstraints="NO" id="lyJ-LM-vdn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="43"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcF-nF-7Wc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
+                                                    <rect key="frame" x="76" y="0.0" width="266" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV7-sv-5lv">
+                                                    <rect key="frame" x="76" y="43" width="266" height="0.0"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="lcF-nF-7Wc" secondAttribute="trailing" id="HFz-Ku-BEQ"/>
-                                                <constraint firstItem="lcF-nF-7Wc" firstAttribute="top" secondItem="7iU-QH-QYQ" secondAttribute="top" id="K0K-cZ-ctW"/>
-                                                <constraint firstItem="lcF-nF-7Wc" firstAttribute="leading" secondItem="7iU-QH-QYQ" secondAttribute="leading" id="TN9-oV-tKj"/>
-                                                <constraint firstAttribute="bottom" secondItem="lcF-nF-7Wc" secondAttribute="bottom" id="Wtg-o9-o5L"/>
+                                                <constraint firstAttribute="trailing" secondItem="lcF-nF-7Wc" secondAttribute="trailing" id="AK5-br-6Yh"/>
+                                                <constraint firstItem="fV7-sv-5lv" firstAttribute="leading" secondItem="7iU-QH-QYQ" secondAttribute="leading" constant="76" id="FwK-pD-Zvz"/>
+                                                <constraint firstItem="fV7-sv-5lv" firstAttribute="leading" secondItem="lyJ-LM-vdn" secondAttribute="trailing" constant="6" id="GSq-15-WPD"/>
+                                                <constraint firstItem="lyJ-LM-vdn" firstAttribute="top" secondItem="7iU-QH-QYQ" secondAttribute="top" id="Hg3-1X-hhi"/>
+                                                <constraint firstAttribute="trailing" secondItem="fV7-sv-5lv" secondAttribute="trailing" id="J39-8p-OFh"/>
+                                                <constraint firstAttribute="bottom" secondItem="lyJ-LM-vdn" secondAttribute="bottom" id="Ldc-XS-wPs"/>
+                                                <constraint firstAttribute="bottom" secondItem="fV7-sv-5lv" secondAttribute="bottom" id="Llk-aO-taW"/>
+                                                <constraint firstItem="lcF-nF-7Wc" firstAttribute="top" secondItem="7iU-QH-QYQ" secondAttribute="top" id="QMR-j4-fXy"/>
+                                                <constraint firstItem="lcF-nF-7Wc" firstAttribute="leading" secondItem="7iU-QH-QYQ" secondAttribute="leading" constant="76" id="qrC-uf-x0H"/>
+                                                <constraint firstItem="lyJ-LM-vdn" firstAttribute="leading" secondItem="7iU-QH-QYQ" secondAttribute="leading" id="rkY-cL-KDx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageLabel" destination="lyJ-LM-vdn" id="VtY-bQ-OAV"/>
+                                            <outlet property="professionLabel" destination="fV7-sv-5lv" id="a6p-dB-gHI"/>
                                             <outlet property="slotLabel" destination="lcF-nF-7Wc" id="qe2-Ti-QjT"/>
                                         </connections>
                                     </tableViewCell>
@@ -89,6 +106,21 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="781.60000000000002" y="-56.221889055472268"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zv5-1w-Bdm">
+            <objects>
+                <viewController id="Ya6-fE-YQs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z9N-9s-Urh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ztU-02-N6k"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5F-Os-3X8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="637"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Zvt-5P-R1s">
@@ -147,4 +179,7 @@
             <point key="canvasLocation" x="21.600000000000001" y="-56.221889055472268"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bat-face" width="45" height="52"/>
+    </resources>
 </document>

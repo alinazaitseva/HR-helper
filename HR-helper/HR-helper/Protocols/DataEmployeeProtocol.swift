@@ -10,7 +10,7 @@ import Foundation
 
 protocol DataEmployeeProtocol {
    
-    func getValueInData(item: Int) -> String
-    func getAmountOfData() -> Int
+    func getValueInDataEmployee(item: Int) -> String
+    func getAmountOfEmployee() -> Int
     
 }

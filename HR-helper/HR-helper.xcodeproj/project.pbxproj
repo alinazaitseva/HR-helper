@@ -18,7 +18,7 @@
 		CE4C3A872114554F00190747 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A862114554F00190747 /* CustomFont.swift */; };
 		CE4C3A892114556E00190747 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A882114556E00190747 /* CustomColor.swift */; };
 		CE4C3A8B2114572D00190747 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A8A2114572D00190747 /* DetailViewController.swift */; };
-		CE4C3A8D21146DDA00190747 /* NewEmployeeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A8C21146DDA00190747 /* NewEmployeeProtocol.swift */; };
+		CE4C3A8F2114987600190747 /* TypeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A8E2114987600190747 /* TypeError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		CE4C3A862114554F00190747 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		CE4C3A882114556E00190747 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		CE4C3A8A2114572D00190747 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		CE4C3A8C21146DDA00190747 /* NewEmployeeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmployeeProtocol.swift; sourceTree = "<group>"; };
+		CE4C3A8E2114987600190747 /* TypeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				CE4C3A8321143F9D00190747 /* DataEmployeeProtocol.swift */,
-				CE4C3A8C21146DDA00190747 /* NewEmployeeProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -129,6 +128,7 @@
 			children = (
 				CE4C3A862114554F00190747 /* CustomFont.swift */,
 				CE4C3A882114556E00190747 /* CustomColor.swift */,
+				CE4C3A8E2114987600190747 /* TypeError.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -205,8 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4C3A672112EFA100190747 /* MainViewController.swift in Sources */,
-				CE4C3A8D21146DDA00190747 /* NewEmployeeProtocol.swift in Sources */,
 				CE4C3A892114556E00190747 /* CustomColor.swift in Sources */,
+				CE4C3A8F2114987600190747 /* TypeError.swift in Sources */,
 				CE4C3A8121143D7E00190747 /* EmployeeList.swift in Sources */,
 				CE4C3A652112EFA100190747 /* AppDelegate.swift in Sources */,
 				CE4C3A872114554F00190747 /* CustomFont.swift in Sources */,

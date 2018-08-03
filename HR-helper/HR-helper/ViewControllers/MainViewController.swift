@@ -14,12 +14,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let employeeList = EmployeeList()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return employeeList.getAmountOfData()
+        return employeeList.getAmountOfEmployee()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SlotTableViewCell", for: indexPath) as? SlotTableViewCell {
-            cell.slotLabel.text = employeeList.getValueInData(item: indexPath.row)
+            cell.slotLabel.text = employeeList.getValueInDataEmployee(item: indexPath.row)
+            cell.professionLabel.text = employeeList.getValueOfProfession(item: indexPath.row)
             return cell
         } else {
             return tableView.dequeueReusableCell(withIdentifier: "SlotTableViewCell", for: indexPath)
@@ -39,6 +40,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //        
 //        detailViewController.dataCell = selectedEntity
 //        navigationController?.pushViewController(detailViewController, animated: true)
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
     
     func setUpUIColor(color: UIColor, for tableView: UITableView) {
@@ -48,7 +50,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
 
