@@ -55,6 +55,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         searchBar.delegate = self as? UISearchBarDelegate
         searchBar.resignFirstResponder()
-        
     }
 }
+
+

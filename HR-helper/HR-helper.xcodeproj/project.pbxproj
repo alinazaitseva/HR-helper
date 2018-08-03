@@ -19,6 +19,7 @@
 		CE4C3A8F2114987600190747 /* TypeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A8E2114987600190747 /* TypeError.swift */; };
 		CE4C3A9121149C2B00190747 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A9021149C2B00190747 /* DetailViewController.swift */; };
 		CE4C3A932114A6D200190747 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A922114A6D200190747 /* EmployeeViewController.swift */; };
+		CE4C3A952114CB1B00190747 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A942114CB1B00190747 /* DateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CE4C3A8E2114987600190747 /* TypeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeError.swift; sourceTree = "<group>"; };
 		CE4C3A9021149C2B00190747 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CE4C3A922114A6D200190747 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		CE4C3A942114CB1B00190747 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4C3A8021143D7E00190747 /* EmployeeList.swift */,
+				CE4C3A942114CB1B00190747 /* DateManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4C3A9121149C2B00190747 /* DetailViewController.swift in Sources */,
+				CE4C3A952114CB1B00190747 /* DateManager.swift in Sources */,
 				CE4C3A932114A6D200190747 /* EmployeeViewController.swift in Sources */,
 				CE4C3A672112EFA100190747 /* MainViewController.swift in Sources */,
 				CE4C3A8F2114987600190747 /* TypeError.swift in Sources */,
