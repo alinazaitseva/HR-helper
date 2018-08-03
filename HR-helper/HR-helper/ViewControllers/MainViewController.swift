@@ -26,12 +26,30 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-
+    func numberOfSections(in _: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print(indexPath.row)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        let selectedEntity = SlotTableViewCell(title: employeeList.getValueInData(item: indexPath.row), description: employeeList.getValueInData)
+//        
+//        detailViewController.dataCell = selectedEntity
+//        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    func setUpUIColor(color: UIColor, for tableView: UITableView) {
+        tableView.separatorColor = color
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
 
 }
-
