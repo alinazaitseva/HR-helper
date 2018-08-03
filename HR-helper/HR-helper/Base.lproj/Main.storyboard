@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="781.60000000000002" y="-56.221889055472268"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailViewController-->
         <scene sceneID="Zv5-1w-Bdm">
             <objects>
-                <viewController id="Ya6-fE-YQs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" title="DetailViewController" id="Ya6-fE-YQs" customClass="DetailViewController" customModule="HR_helper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z9N-9s-Urh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,12 +120,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5F-Os-3X8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="637"/>
+            <point key="canvasLocation" x="782" y="640"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Employee View Controller-->
         <scene sceneID="Zvt-5P-R1s">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="yUc-zv-Cok" customClass="DetailViewController" customModule="HR_helper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EmployeeViewController" id="yUc-zv-Cok" customClass="EmployeeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HOv-ji-M2V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
