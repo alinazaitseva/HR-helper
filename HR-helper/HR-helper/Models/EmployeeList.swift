@@ -8,6 +8,24 @@
 
 import Foundation
 import UIKit
+//
+//struct EmployeeEntity {
+//    var name: String
+//    var position: String
+//    var dateOfBirth: Date
+//    var image: UIImage
+//
+//   mutating func setUniqName() {
+//        var new = ""
+//        if let lastCharacter = name.last, let number = Int(String(lastCharacter)) {
+//            let newNumber = number + 1
+//            new = String(newNumber)
+//        }
+//        name = name + new
+//    }
+//}
+//
+
 
 class EmployeeList: DataEmployeeProtocol {
     
@@ -47,4 +65,13 @@ class EmployeeList: DataEmployeeProtocol {
         return listOfProfession.count
     }
     
+    
+    
+    func add(_ employee: EmployeeList) {
+        var temporary = employee
+//        if  listOfEmployee.contains(employee) {
+//            temporary.setUniqName()
+//        }
+//        listOfEmployee.append(employee)
+    }
 }

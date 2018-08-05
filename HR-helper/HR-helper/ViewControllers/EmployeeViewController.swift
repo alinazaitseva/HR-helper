@@ -16,6 +16,7 @@ class EmployeeViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var positionTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
+    var employeeList: EmployeeList?
     
     var employeeName: String?
     var employeePosition: String?
@@ -52,7 +53,7 @@ class EmployeeViewController: UIViewController {
                 if status == .authorized {
                     self.presentImagePicker()
                 } else {
-//                    self.showAlert(title: "Warning", message: TypeError.invalidImage.localizedDescription)
+                    self.showAlert(title: "Warning", message: TypeError.invalidImage.localizedDescription)
                 }
             })
         } else if photos == .authorized {
@@ -71,6 +72,26 @@ class EmployeeViewController: UIViewController {
     }
     @IBAction func addNewEmployee(_ sender: UIBarButtonItem) {
         let dateEmployeePicker = self.dateEmployeePicker ?? datePicker.date
+        if let imageUser = imageView.image {
+            employeeList?.image = imageUser
+        }
+        var isTextFieldFull = true
+        if employeeName == nil || (employeeName?.isEmpty)! {
+        nameTextField.placeholder = "Please input name"
+        }
+        if employeePosition == nil || (employeePosition?.isEmpty)! {
+            nameTextField.placeholder = "Please input position"
+        }
+//        if isTextFieldFull {
+//            let newEmployee = EmployeeList(
+//                name: String,
+//                position: String,
+//                dateOfBirth: Date,
+//                image: UIImage)
+//        }
+        
+        self.navigationController?.popToRootViewController(animated: true)
+        self.view.layoutIfNeeded()
     }
     
     
@@ -94,5 +115,12 @@ extension EmployeeViewController: UIImagePickerControllerDelegate, UINavigationC
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         dismiss(animated: true, completion: nil)
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        
+        present(alert, animated: true, completion: nil)
     }
 }
