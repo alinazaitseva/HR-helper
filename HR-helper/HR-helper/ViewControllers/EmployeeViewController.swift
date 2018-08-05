@@ -19,6 +19,7 @@ class EmployeeViewController: UIViewController {
     
     var employeeName: String?
     var employeePosition: String?
+    var dateEmployeePicker: Date?
     
     @IBAction func datePickerPushed(_ sender: UIDatePicker) {
     }
@@ -69,7 +70,7 @@ class EmployeeViewController: UIViewController {
         present(picker, animated: true, completion: nil)
     }
     @IBAction func addNewEmployee(_ sender: UIBarButtonItem) {
-        
+        let dateEmployeePicker = self.dateEmployeePicker ?? datePicker.date
     }
     
     
@@ -82,7 +83,6 @@ extension EmployeeViewController: UIImagePickerControllerDelegate, UINavigationC
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         dismiss(animated: true, completion: nil)
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-//            showAlert(title: "Error", message: TypeError.imageInvalid.localizedDescription)
             return
         }
         self.avatarContainer.backgroundColor = .clear

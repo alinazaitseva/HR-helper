@@ -7,8 +7,21 @@
 //
 
 import Foundation
+import UIKit
 
 class EmployeeList: DataEmployeeProtocol {
+    
+    var name: String
+    var position: String
+    var dateOfBirth: Date
+    var image: UIImage
+    
+    init(name: String, position: String, dateOfBirth: Date, image: UIImage ) {
+        self.name = name
+        self.position = position
+        self.dateOfBirth = dateOfBirth
+        self.image = image
+    }
     
     var listOfEmployee: [String] {
         return ["Petro Pidkova", "Ivan Salo", "Jack Sparrow", "Tony Stark", "Pinocchio"]

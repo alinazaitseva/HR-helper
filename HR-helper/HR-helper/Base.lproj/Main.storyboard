@@ -193,9 +193,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="pushedTextField:" destination="yUc-zv-Cok" eventType="editingDidEnd" id="sOs-8I-55K"/>
-                                </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vuO-68-8rW">
                                 <rect key="frame" x="56" y="407" width="303" height="216"/>
