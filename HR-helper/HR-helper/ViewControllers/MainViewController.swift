@@ -50,11 +50,41 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == UITableViewCellEditingStyle.delete {
+//            dataSource.delete(dataSource[indexPath.row])
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//        }
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self as? UISearchBarDelegate
         searchBar.resignFirstResponder()
     }
+    
+//    func filterContentForSearchText(_ searchText: String) {
+//        filteredEmployees = fakeData.filter({( employee : EmployeeEntity) -> Bool in
+//            return employee.name.lowercased().contains(searchText.lowercased())
+//        })
+//        if searchText.isEmpty {
+//            employeesListTable?.filteredEmployees = nil
+//        } else {
+//            employeesListTable?.filteredEmployees = filteredEmployees
+//        }
+//        employeesListTable?.tableView.reloadData()
+//    }
 }
 
+extension MainViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+//        self.filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
+extension MainViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        self.filterContentForSearchText(searchText)
+    }
+}
 

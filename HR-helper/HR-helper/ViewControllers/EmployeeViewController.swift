@@ -16,11 +16,11 @@ class EmployeeViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var positionTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-    var employeeList: EmployeeList?
     
     var employeeName: String?
     var employeePosition: String?
     var dateEmployeePicker: Date?
+    var employeeEntity: EmployeeEntity?
     
     @IBAction func datePickerPushed(_ sender: UIDatePicker) {
     }
@@ -29,7 +29,7 @@ class EmployeeViewController: UIViewController {
         super.viewDidLoad()
         nameTextField.delegate = self as? UITextFieldDelegate
         positionTextField.delegate = self as? UITextFieldDelegate
-
+        
     }
     
     @IBAction func pushedTextField(_ sender: UITextField) {
@@ -59,7 +59,7 @@ class EmployeeViewController: UIViewController {
         } else if photos == .authorized {
             presentImagePicker()
         }
-    
+        
     }
     
     private func presentImagePicker() {
@@ -73,22 +73,22 @@ class EmployeeViewController: UIViewController {
     @IBAction func addNewEmployee(_ sender: UIBarButtonItem) {
         let dateEmployeePicker = self.dateEmployeePicker ?? datePicker.date
         if let imageUser = imageView.image {
-            employeeList?.image = imageUser
+            employeeEntity?.image = imageUser
         }
         var isTextFieldFull = true
         if employeeName == nil || (employeeName?.isEmpty)! {
-        nameTextField.placeholder = "Please input name"
+            nameTextField.placeholder = "Please input name"
         }
         if employeePosition == nil || (employeePosition?.isEmpty)! {
             nameTextField.placeholder = "Please input position"
         }
-//        if isTextFieldFull {
-//            let newEmployee = EmployeeList(
-//                name: String,
-//                position: String,
-//                dateOfBirth: Date,
-//                image: UIImage)
-//        }
+        //        if isTextFieldFull {
+        //            let newEmployee = EmployeeEntity (
+        //                name: String,
+        //                position: String,
+        //                dateOfBirth: Date,
+        //                image: UIImage)
+        //        }
         
         self.navigationController?.popToRootViewController(animated: true)
         self.view.layoutIfNeeded()
