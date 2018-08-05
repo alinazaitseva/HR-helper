@@ -17,13 +17,27 @@ class EmployeeViewController: UIViewController {
     @IBOutlet weak var positionTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    var employeeName: String?
+    var employeePosition: String?
     
     @IBAction func datePickerPushed(_ sender: UIDatePicker) {
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameTextField.delegate = self as? UITextFieldDelegate
+        positionTextField.delegate = self as? UITextFieldDelegate
 
+    }
+    
+    @IBAction func pushedTextField(_ sender: UITextField) {
+        let text = sender.text
+        
+        if sender == nameTextField {
+            employeeName = text
+        } else if sender == positionTextField {
+            employeePosition = text
+        }
     }
     
     @IBAction func addPhotoTapped(_ sender: UIButton) {
@@ -54,6 +68,11 @@ class EmployeeViewController: UIViewController {
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(picker, animated: true, completion: nil)
     }
+    @IBAction func addNewEmployee(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    
 }
 
 extension EmployeeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

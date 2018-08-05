@@ -180,6 +180,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="pushedTextField:" destination="yUc-zv-Cok" eventType="editingChanged" id="kCi-Yt-4jq"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K8t-De-Cuv">
                                 <rect key="frame" x="106" y="352" width="242" height="30"/>
@@ -190,6 +193,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="pushedTextField:" destination="yUc-zv-Cok" eventType="editingDidEnd" id="sOs-8I-55K"/>
+                                </connections>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vuO-68-8rW">
                                 <rect key="frame" x="56" y="407" width="303" height="216"/>
@@ -241,7 +247,11 @@
                         <viewLayoutGuide key="safeArea" id="iCD-O8-32J"/>
                     </view>
                     <navigationItem key="navigationItem" id="kzL-In-T8W">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="nqp-gX-2PE"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="nqp-gX-2PE">
+                            <connections>
+                                <action selector="addNewEmployee:" destination="yUc-zv-Cok" id="xTv-iU-Ipq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="avatarContainer" destination="Qoi-jw-Ao7" id="Cla-w0-a8c"/>
