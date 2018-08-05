@@ -120,13 +120,73 @@
                     <view key="view" contentMode="scaleToFill" id="Z9N-9s-Urh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4K-Gg-o86">
+                                <rect key="frame" x="88" y="82" width="240" height="170"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vXm-Uz-Bnd">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="170"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vXm-Uz-Bnd" secondAttribute="bottom" id="4j9-em-xw9"/>
+                                    <constraint firstItem="vXm-Uz-Bnd" firstAttribute="top" secondItem="T4K-Gg-o86" secondAttribute="top" id="A0y-Ls-NxR"/>
+                                    <constraint firstAttribute="trailing" secondItem="vXm-Uz-Bnd" secondAttribute="trailing" id="ho8-63-3CD"/>
+                                    <constraint firstItem="vXm-Uz-Bnd" firstAttribute="leading" secondItem="T4K-Gg-o86" secondAttribute="leading" id="l4F-C0-dUE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMW-S0-Zt1">
+                                <rect key="frame" x="106" y="299" width="202" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TJ-9b-g8Y">
+                                <rect key="frame" x="107" y="337" width="202" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVh-5G-ehc">
+                                <rect key="frame" x="107" y="365.5" width="202" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zMW-S0-Zt1" firstAttribute="top" secondItem="T4K-Gg-o86" secondAttribute="bottom" constant="47" id="3oh-aj-eTR"/>
+                            <constraint firstItem="zMW-S0-Zt1" firstAttribute="top" secondItem="T4K-Gg-o86" secondAttribute="bottom" constant="47" id="7Qo-D9-l6j"/>
+                            <constraint firstItem="SVh-5G-ehc" firstAttribute="leading" secondItem="ztU-02-N6k" secondAttribute="leading" constant="107" id="ASz-BR-NMF"/>
+                            <constraint firstItem="SVh-5G-ehc" firstAttribute="top" secondItem="3TJ-9b-g8Y" secondAttribute="bottom" constant="8" id="Ede-uo-Bfg"/>
+                            <constraint firstItem="ztU-02-N6k" firstAttribute="trailing" secondItem="SVh-5G-ehc" secondAttribute="trailing" constant="66" id="InP-xf-ZR5"/>
+                            <constraint firstItem="ztU-02-N6k" firstAttribute="trailing" secondItem="zMW-S0-Zt1" secondAttribute="trailing" constant="67" id="PTu-ah-wNg"/>
+                            <constraint firstItem="3TJ-9b-g8Y" firstAttribute="top" secondItem="zMW-S0-Zt1" secondAttribute="bottom" constant="8" id="T8N-IN-v1b"/>
+                            <constraint firstItem="3TJ-9b-g8Y" firstAttribute="leading" secondItem="ztU-02-N6k" secondAttribute="leading" constant="107" id="Vzt-e8-AU0"/>
+                            <constraint firstItem="ztU-02-N6k" firstAttribute="bottom" secondItem="SVh-5G-ehc" secondAttribute="bottom" constant="281" id="Wi9-kO-N9k"/>
+                            <constraint firstItem="T4K-Gg-o86" firstAttribute="top" secondItem="ztU-02-N6k" secondAttribute="top" constant="62" id="b9G-WP-OHy"/>
+                            <constraint firstItem="ztU-02-N6k" firstAttribute="trailing" secondItem="3TJ-9b-g8Y" secondAttribute="trailing" constant="66" id="bJW-Px-Res"/>
+                            <constraint firstItem="SVh-5G-ehc" firstAttribute="top" secondItem="3TJ-9b-g8Y" secondAttribute="bottom" constant="8" id="djT-sc-7f1"/>
+                            <constraint firstItem="3TJ-9b-g8Y" firstAttribute="top" secondItem="zMW-S0-Zt1" secondAttribute="bottom" constant="8" id="jV8-vs-RUU"/>
+                            <constraint firstItem="T4K-Gg-o86" firstAttribute="leading" secondItem="ztU-02-N6k" secondAttribute="leading" constant="88" id="rwl-9u-quz"/>
+                            <constraint firstItem="zMW-S0-Zt1" firstAttribute="leading" secondItem="ztU-02-N6k" secondAttribute="leading" constant="106" id="xyU-zb-Otz"/>
+                            <constraint firstItem="ztU-02-N6k" firstAttribute="trailing" secondItem="T4K-Gg-o86" secondAttribute="trailing" constant="47" id="zBg-FM-TgJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ztU-02-N6k"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarContainer" destination="T4K-Gg-o86" id="UaF-QD-KiI"/>
+                        <outlet property="avatarDetail" destination="vXm-Uz-Bnd" id="bsZ-f3-ICQ"/>
+                        <outlet property="dateOfBirthEmployee" destination="SVh-5G-ehc" id="txI-J4-kWK"/>
+                        <outlet property="nameEmployee" destination="zMW-S0-Zt1" id="iUf-mJ-faf"/>
+                        <outlet property="positionEmployee" destination="3TJ-9b-g8Y" id="a03-Ri-fp8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5F-Os-3X8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="497" y="650"/>
+            <point key="canvasLocation" x="496.80000000000001" y="649.92503748125944"/>
         </scene>
         <!--Employee View Controller-->
         <scene sceneID="Zvt-5P-R1s">

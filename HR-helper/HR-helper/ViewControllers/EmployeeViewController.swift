@@ -100,8 +100,8 @@ class EmployeeViewController: UIViewController {
 extension EmployeeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         UINavigationBar.appearance().isTranslucent = true
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().tintColor = CustomColor.cyanCustom.color
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: CustomColor.cyanCustom.color]
         dismiss(animated: true, completion: nil)
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
             return
@@ -112,8 +112,8 @@ extension EmployeeViewController: UIImagePickerControllerDelegate, UINavigationC
     
     func imagePickerControllerDidCancel(_: UIImagePickerController) {
         UINavigationBar.appearance().isTranslucent = true
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().tintColor = CustomColor.cyanCustom.color
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: CustomColor.cyanCustom.color]
         dismiss(animated: true, completion: nil)
     }
     
