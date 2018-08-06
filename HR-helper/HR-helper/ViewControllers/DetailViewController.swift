@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         nameEmployee.text = selectedEmployee?.name
         positionEmployee.text = selectedEmployee?.position
-        if avatarDetail.image != nil {
+        if selectedEmployee?.image != nil {
             avatarDetail.image = selectedEmployee?.image
         }
         if selectedEmployee?.dateOfBirth != nil {
