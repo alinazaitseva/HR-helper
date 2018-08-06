@@ -21,13 +21,18 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateEmployee()
+    }
+    
+    func updateEmployee() {
         nameEmployee.text = selectedEmployee?.name
         positionEmployee.text = selectedEmployee?.position
         if selectedEmployee?.image != nil {
             avatarDetail.image = selectedEmployee?.image
         }
-        if selectedEmployee?.dateOfBirth != nil {
-            dateOfBirthEmployee.text = selectedEmployee?.dateOfBirth?.description
+        if selectedEmployee?.dateOfBirth != nil, let date: Date = selectedEmployee?.dateOfBirth {
+            let dateService = DateService(date: date, datePattern: "MM-dd-yyyy")
+            dateOfBirthEmployee.text = dateService?.shownDate
         }
     }
 }

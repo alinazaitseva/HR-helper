@@ -30,10 +30,10 @@ class EmployeeList {
     var listOfProfession: [String] = ["Sale Manager", "CEO", "Captain", "Iron Man", "Puppet"]
     
     var employees: [EmployeeEntity] = [
-        EmployeeEntity(name: "Petro Pidkova", position: "Sale Manager", dateOfBirth: nil, image: nil),
-        EmployeeEntity(name: "Ivan Salo", position: "CEO", dateOfBirth: nil, image: nil),
-        EmployeeEntity(name: "Jack Sparrow", position: "Captain", dateOfBirth: nil, image: nil),
-        EmployeeEntity(name: "Tony Stark", position: "Iron Man", dateOfBirth: nil, image: nil)]
+        EmployeeEntity(name: "Petro Pidkova", position: "Sale Manager", dateOfBirth: Date(), image:#imageLiteral(resourceName: "bat-face") ),
+        EmployeeEntity(name: "Ivan Salo", position: "CEO", dateOfBirth: Date(), image: #imageLiteral(resourceName: "Webp.net-resizeimage (1)")),
+        EmployeeEntity(name: "Jack Sparrow", position: "Captain", dateOfBirth: Date(), image: #imageLiteral(resourceName: "bat-face")),
+        EmployeeEntity(name: "Tony Stark", position: "Iron Man", dateOfBirth: Date(), image: #imageLiteral(resourceName: "Webp.net-resizeimage (1)"))]
     
     var amountOfEmployee: Int {
         return employees.count
@@ -47,5 +47,8 @@ class EmployeeList {
         employees.append(employee)
     }
     
+    func deleteEmployee(_ index: Int) {
+        employees.remove(at: index)
+    }
     
 }

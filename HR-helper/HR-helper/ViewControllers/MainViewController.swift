@@ -13,6 +13,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let employeeList = EmployeeList()
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    var filteredEmployee: [EmployeeEntity]?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return employeeList.amountOfEmployee
@@ -57,12 +58,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == UITableViewCellEditingStyle.delete {
-//            dataSource.delete(dataSource[indexPath.row])
-//            tableView.deleteRows(at: [indexPath], with: .automatic)
-//        }
-//    }
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            employeeList.deleteEmployee(indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,28 +71,26 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         searchBar.resignFirstResponder()
     }
     
-//    func filterContentForSearchText(_ searchText: String) {
-//        filteredEmployees = fakeData.filter({( employee : EmployeeEntity) -> Bool in
-//            return employee.name.lowercased().contains(searchText.lowercased())
-//        })
-//        if searchText.isEmpty {
-//            employeesListTable?.filteredEmployees = nil
-//        } else {
-//            employeesListTable?.filteredEmployees = filteredEmployees
-//        }
-//        employeesListTable?.tableView.reloadData()
-//    }
+    func filterContentForSearchText(_ searchText: String) {
+        filteredEmployee = employeeList.employees.filter({( employee : EmployeeEntity) -> Bool in
+            return employee.name.lowercased().contains(searchText.lowercased())
+        })
+        if searchText.isEmpty {
+            self.filteredEmployee = nil
+        } 
+        self.tableView.reloadData()
+    }
 }
 
 extension MainViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-//        self.filterContentForSearchText(searchController.searchBar.text!)
+        self.filterContentForSearchText(searchController.searchBar.text!)
     }
 }
 
 extension MainViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        self.filterContentForSearchText(searchText)
+        self.filterContentForSearchText(searchText)
     }
 }
 
