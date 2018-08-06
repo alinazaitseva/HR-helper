@@ -12,6 +12,5 @@ class SlotTableViewCell: UITableViewCell {
    
     @IBOutlet weak var slotLabel: UILabel!
     @IBOutlet weak var professionLabel: UILabel!
-    
     @IBOutlet weak var imageLabel: UIImageView!
 }

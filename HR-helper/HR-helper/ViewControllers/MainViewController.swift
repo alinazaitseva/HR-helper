@@ -16,7 +16,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var filteredEmployee: [EmployeeEntity]?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return employeeList.amountOfEmployee
+        if let filteredEmployee = filteredEmployee {
+            return filteredEmployee.count
+        } else {
+            return employeeList.amountOfEmployee
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,18 +29,23 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func addEmployee(_ sender: UIBarButtonItem) {
         guard let employeeVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "EmployeeViewController") as? EmployeeViewController
-        else { return }
+            else { return }
         employeeVC.employeeList = employeeList
         self.navigationController?.pushViewController(employeeVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SlotTableViewCell", for: indexPath) as? SlotTableViewCell {
-            let worker = employeeList.getEmployee(index: indexPath.row)
-            cell.slotLabel.text = worker.name
-            cell.professionLabel.text = worker.position
-            if worker.image != nil {
-              cell.imageLabel.image = worker.image
+            var worker: EmployeeEntity?
+            if let filteredEmployee = filteredEmployee {
+                worker = filteredEmployee[indexPath.row]
+            } else {
+                worker = employeeList.getEmployee(index: indexPath.row)
+            }
+            cell.slotLabel.text = worker?.name
+            cell.professionLabel.text = worker?.position
+            if worker?.image != nil {
+                cell.imageLabel.image = worker?.image
             }
             return cell
         } else {
@@ -58,7 +67,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     
-     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
             employeeList.deleteEmployee(indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
@@ -67,8 +76,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self as? UISearchBarDelegate
-        searchBar.resignFirstResponder()
+        self.searchBar.delegate = self
     }
     
     func filterContentForSearchText(_ searchText: String) {
@@ -82,13 +90,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 }
 
-extension MainViewController: UISearchResultsUpdating {
+extension MainViewController: UISearchResultsUpdating, UISearchBarDelegate  {
     func updateSearchResults(for searchController: UISearchController) {
         self.filterContentForSearchText(searchController.searchBar.text!)
     }
-}
-
-extension MainViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.filterContentForSearchText(searchText)
     }
