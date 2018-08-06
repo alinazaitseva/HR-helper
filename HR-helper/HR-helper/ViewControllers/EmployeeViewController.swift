@@ -24,6 +24,7 @@ class EmployeeViewController: UIViewController {
     var employeeList: EmployeeList?
     
     @IBAction func datePickerPushed(_ sender: UIDatePicker) {
+        print(sender.date)
     }
     
     override func viewDidLoad() {

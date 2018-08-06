@@ -52,10 +52,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         tableView.reloadData()
-//        let selectedEntity = SlotTableViewCell(title: employeeList.getValueInData(item: indexPath.row), description: employeeList.getValueInData)
-//        
-//        detailViewController.dataCell = selectedEntity
-//        navigationController?.pushViewController(detailViewController, animated: true)
+        let selectedEmployee = employeeList.getEmployee(index: indexPath.row)
+        detailViewController.selectedEmployee = selectedEmployee
         navigationController?.pushViewController(detailViewController, animated: true)
     }
     

@@ -16,20 +16,18 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dateOfBirthEmployee: UILabel!
     @IBOutlet weak var positionEmployee: UILabel!
     
-    var employeeEntity: EmployeeEntity?
-    var employeeList: EmployeeList!
+    var employeeList: EmployeeList?
+    var selectedEmployee: EmployeeEntity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let entity = employeeEntity else { return }
+        nameEmployee.text = selectedEmployee?.name
+        positionEmployee.text = selectedEmployee?.position
+        if avatarDetail.image != nil {
+            avatarDetail.image = selectedEmployee?.image
+        }
+        if selectedEmployee?.dateOfBirth != nil {
+            dateOfBirthEmployee.text = selectedEmployee?.dateOfBirth?.description
+        }
     }
-    
-    private func configureWith (entity: EmployeeEntity) {
-        nameEmployee.text = entity.name
-        positionEmployee.text = entity.position
-        let date = DateManager(date: entity.dateOfBirth!, datePattern: .byDefault)
-//        dateOfBirthEmployee.text.date.result
-//         avatarDetail.image =
-    }
-    
 }
