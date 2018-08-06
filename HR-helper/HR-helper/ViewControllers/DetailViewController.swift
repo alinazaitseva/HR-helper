@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
     private func configureWith (entity: EmployeeEntity) {
         nameEmployee.text = entity.name
         positionEmployee.text = entity.position
-        let date = DateManager(date: entity.dateOfBirth, datePattern: .byDefault)
+        let date = DateManager(date: entity.dateOfBirth!, datePattern: .byDefault)
 //        dateOfBirthEmployee.text.date.result
 //         avatarDetail.image =
     }

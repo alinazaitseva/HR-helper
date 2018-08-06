@@ -10,24 +10,30 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-    @IBOutlet weak var tableView: UIView!
     let employeeList = EmployeeList()
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return employeeList.getAmountOfEmployee()
+        return employeeList.amountOfEmployee
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
     
     @IBAction func addEmployee(_ sender: UIBarButtonItem) {
         guard let employeeVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "EmployeeViewController") as? EmployeeViewController
         else { return }
+        employeeVC.employeeList = employeeList
         self.navigationController?.pushViewController(employeeVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SlotTableViewCell", for: indexPath) as? SlotTableViewCell {
-            cell.slotLabel.text = employeeList.getValueInDataEmployee(item: indexPath.row)
-            cell.professionLabel.text = employeeList.getValueOfProfession(item: indexPath.row)
+            let worker = employeeList.getEmployee(index: indexPath.row)
+            cell.slotLabel.text = worker.name
+            cell.professionLabel.text = worker.position
             return cell
         } else {
             return tableView.dequeueReusableCell(withIdentifier: "SlotTableViewCell", for: indexPath)

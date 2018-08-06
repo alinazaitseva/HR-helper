@@ -11,6 +11,8 @@ import Foundation
 protocol DataEmployeeProtocol {
    
     func getValueInDataEmployee(item: Int) -> String
-    func getAmountOfEmployee() -> Int
+    var amountOfEmployee: Int { get }
+    func getValueOfProfession(item: Int) -> String
+   
     
 }

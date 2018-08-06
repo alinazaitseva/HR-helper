@@ -21,6 +21,7 @@ class EmployeeViewController: UIViewController {
     var employeePosition: String?
     var dateEmployeePicker: Date?
     var employeeEntity: EmployeeEntity?
+    var employeeList: EmployeeList?
     
     @IBAction func datePickerPushed(_ sender: UIDatePicker) {
     }
@@ -29,16 +30,13 @@ class EmployeeViewController: UIViewController {
         super.viewDidLoad()
         nameTextField.delegate = self as? UITextFieldDelegate
         positionTextField.delegate = self as? UITextFieldDelegate
-        
     }
     
     @IBAction func pushedTextField(_ sender: UITextField) {
-        let text = sender.text
-        
         if sender == nameTextField {
-            employeeName = text
+            employeeName = sender.text
         } else if sender == positionTextField {
-            employeePosition = text
+            employeePosition = sender.text
         }
     }
     
@@ -59,7 +57,6 @@ class EmployeeViewController: UIViewController {
         } else if photos == .authorized {
             presentImagePicker()
         }
-        
     }
     
     private func presentImagePicker() {
@@ -70,31 +67,15 @@ class EmployeeViewController: UIViewController {
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(picker, animated: true, completion: nil)
     }
+    
     @IBAction func addNewEmployee(_ sender: UIBarButtonItem) {
         let dateEmployeePicker = self.dateEmployeePicker ?? datePicker.date
-        if let imageUser = imageView.image {
-            employeeEntity?.image = imageUser
-        }
-        var isTextFieldFull = true
-        if employeeName == nil || (employeeName?.isEmpty)! {
-            nameTextField.placeholder = "Please input name"
-        }
-        if employeePosition == nil || (employeePosition?.isEmpty)! {
-            nameTextField.placeholder = "Please input position"
-        }
-        //        if isTextFieldFull {
-        //            let newEmployee = EmployeeEntity (
-        //                name: String,
-        //                position: String,
-        //                dateOfBirth: Date,
-        //                image: UIImage)
-        //        }
-        
+        employeeList?.addEmployee(EmployeeEntity.init(name: employeeName!, position: employeePosition!, dateOfBirth: nil
+            , image: nil))
+
         self.navigationController?.popToRootViewController(animated: true)
         self.view.layoutIfNeeded()
     }
-    
-    
 }
 
 extension EmployeeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
