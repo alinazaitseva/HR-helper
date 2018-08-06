@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE29D3D8211796560009D25C /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D3D7211796560009D25C /* CustomColor.swift */; };
 		CE4C3A652112EFA100190747 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A642112EFA100190747 /* AppDelegate.swift */; };
 		CE4C3A672112EFA100190747 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A662112EFA100190747 /* MainViewController.swift */; };
 		CE4C3A6A2112EFA100190747 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4C3A682112EFA100190747 /* Main.storyboard */; };
 		CE4C3A6C2112EFBA00190747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4C3A6B2112EFBA00190747 /* Assets.xcassets */; };
 		CE4C3A6F2112EFBA00190747 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4C3A6D2112EFBA00190747 /* LaunchScreen.storyboard */; };
+		CE4C3A7E2114375D00190747 /* SlotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A7D2114375D00190747 /* SlotTableViewCell.swift */; };
+		CE4C3A8121143D7E00190747 /* EmployeeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A8021143D7E00190747 /* EmployeeList.swift */; };
+		CE4C3A872114554F00190747 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A862114554F00190747 /* CustomFont.swift */; };
+		CE4C3A8F2114987600190747 /* TypeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A8E2114987600190747 /* TypeError.swift */; };
+		CE4C3A9121149C2B00190747 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A9021149C2B00190747 /* DetailViewController.swift */; };
+		CE4C3A932114A6D200190747 /* EmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A922114A6D200190747 /* EmployeeViewController.swift */; };
+		CE4C3A952114CB1B00190747 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4C3A942114CB1B00190747 /* DateService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE29D3D7211796560009D25C /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		CE4C3A612112EFA000190747 /* HR-helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HR-helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C3A642112EFA100190747 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4C3A662112EFA100190747 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,13 @@
 		CE4C3A6B2112EFBA00190747 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4C3A6E2112EFBA00190747 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE4C3A702112EFBB00190747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE4C3A7D2114375D00190747 /* SlotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotTableViewCell.swift; sourceTree = "<group>"; };
+		CE4C3A8021143D7E00190747 /* EmployeeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeList.swift; sourceTree = "<group>"; };
+		CE4C3A862114554F00190747 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		CE4C3A8E2114987600190747 /* TypeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeError.swift; sourceTree = "<group>"; };
+		CE4C3A9021149C2B00190747 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CE4C3A922114A6D200190747 /* EmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewController.swift; sourceTree = "<group>"; };
+		CE4C3A942114CB1B00190747 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +70,13 @@
 		CE4C3A632112EFA000190747 /* HR-helper */ = {
 			isa = PBXGroup;
 			children = (
+				CE4C3A85211454AF00190747 /* Enums */,
+				CE4C3A7F2114376600190747 /* Cells */,
 				CE4C3A782112F08500190747 /* Models */,
 				CE4C3A772112F07400190747 /* ViewControllers */,
-				CE4C3A762112EFD200190747 /* Supporting files */,
 				CE4C3A682112EFA100190747 /* Main.storyboard */,
 				CE4C3A702112EFBB00190747 /* Info.plist */,
+				CE4C3A762112EFD200190747 /* Supporting files */,
 			);
 			path = "HR-helper";
 			sourceTree = "<group>";
@@ -77,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				CE4C3A662112EFA100190747 /* MainViewController.swift */,
+				CE4C3A9021149C2B00190747 /* DetailViewController.swift */,
+				CE4C3A922114A6D200190747 /* EmployeeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -84,8 +104,28 @@
 		CE4C3A782112F08500190747 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE4C3A8021143D7E00190747 /* EmployeeList.swift */,
+				CE4C3A942114CB1B00190747 /* DateService.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE4C3A7F2114376600190747 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3A7D2114375D00190747 /* SlotTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE4C3A85211454AF00190747 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C3A862114554F00190747 /* CustomFont.swift */,
+				CE4C3A8E2114987600190747 /* TypeError.swift */,
+				CE29D3D7211796560009D25C /* CustomColor.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +199,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4C3A9121149C2B00190747 /* DetailViewController.swift in Sources */,
+				CE4C3A952114CB1B00190747 /* DateService.swift in Sources */,
+				CE29D3D8211796560009D25C /* CustomColor.swift in Sources */,
+				CE4C3A932114A6D200190747 /* EmployeeViewController.swift in Sources */,
 				CE4C3A672112EFA100190747 /* MainViewController.swift in Sources */,
+				CE4C3A8F2114987600190747 /* TypeError.swift in Sources */,
+				CE4C3A8121143D7E00190747 /* EmployeeList.swift in Sources */,
 				CE4C3A652112EFA100190747 /* AppDelegate.swift in Sources */,
+				CE4C3A872114554F00190747 /* CustomFont.swift in Sources */,
+				CE4C3A7E2114375D00190747 /* SlotTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
