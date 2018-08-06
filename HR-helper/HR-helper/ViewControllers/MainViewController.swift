@@ -34,6 +34,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let worker = employeeList.getEmployee(index: indexPath.row)
             cell.slotLabel.text = worker.name
             cell.professionLabel.text = worker.position
+            if worker.image != nil {
+              cell.imageLabel.image = worker.image
+            }
             return cell
         } else {
             return tableView.dequeueReusableCell(withIdentifier: "SlotTableViewCell", for: indexPath)

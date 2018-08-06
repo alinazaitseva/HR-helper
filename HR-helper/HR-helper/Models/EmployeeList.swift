@@ -35,27 +35,9 @@ class EmployeeList {
         EmployeeEntity(name: "Jack Sparrow", position: "Captain", dateOfBirth: nil, image: nil),
         EmployeeEntity(name: "Tony Stark", position: "Iron Man", dateOfBirth: nil, image: nil)]
     
-    func getValueInDataEmployee(item: Int) -> String {
-        return employees[item].name
-    }
-    
     var amountOfEmployee: Int {
         return employees.count
     }
-    
-    func getValueOfProfession(item: Int) -> String {
-        return employees[item].position
-    }
-    
-    func addNewEmployee(_ employee: String) {
-        listOfEmployee.append(employee)
-    }
-    
-    func addNewEmployeePosition(_ position: String) {
-        listOfProfession.append(position)
-    }
-    
-    
     
     func getEmployee(index: Int) -> EmployeeEntity {
         return employees[index]

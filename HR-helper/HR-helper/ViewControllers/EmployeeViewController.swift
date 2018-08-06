@@ -70,9 +70,8 @@ class EmployeeViewController: UIViewController {
     
     @IBAction func addNewEmployee(_ sender: UIBarButtonItem) {
         let dateEmployeePicker = self.dateEmployeePicker ?? datePicker.date
-        employeeList?.addEmployee(EmployeeEntity.init(name: employeeName!, position: employeePosition!, dateOfBirth: nil
-            , image: nil))
-
+        employeeList?.addEmployee(EmployeeEntity.init(name: employeeName!, position: employeePosition!, dateOfBirth: dateEmployeePicker
+            , image: imageView.image ))
         self.navigationController?.popToRootViewController(animated: true)
         self.view.layoutIfNeeded()
     }
